@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Direction</th>
+      <th>Duration</th>
+      <th>Status</th>
+      <th>Sid</th>
+      <th>Recording url</th>
+      <th>Recording duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calls.each do |call| %>
+      <tr>
+        <td><%= call.from %></td>
+        <td><%= call.to %></td>
+        <td><%= call.direction %></td>
+        <td><%= call.duration %></td>
+        <td><%= call.status %></td>
+        <td><%= call.sid %></td>
+        <td><%= call.recording_url %></td>
+        <td><%= call.recording_duration %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
